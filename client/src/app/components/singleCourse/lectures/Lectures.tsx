@@ -13,7 +13,7 @@ type Course ={
       body:string,
       summary:string
   }],
-  subCourses:[],
+  subCourses:string[],
   image:{
       public_id:string,
       url:string

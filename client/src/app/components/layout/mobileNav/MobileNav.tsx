@@ -8,8 +8,10 @@ import {
 import {Link} from "react-router-dom"
 import { NAV_LINKS2 } from "../../../../constants"
 import { SlLogout } from "react-icons/sl"
+import { useAppSelector } from "../../../redux/hooks"
 
 const MobileNav = () => {
+  const {user} =useAppSelector((state)=>state.auth)
   return (
     <section className="w-full max-w-[300px]">
          <Sheet>
@@ -18,8 +20,8 @@ const MobileNav = () => {
               </SheetTrigger>
               <SheetContent side="right" className="border-none  bg-opacity-80 backdrop-filter backdrop-blur-sm flex flex-col gap-6">
                 <Link to="/" className="flex items-center gap-2 mt-10 ">
-                    <img src="https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?auto=compress&cs=tinysrgb&w=600" alt="logo" className="h-[40px] rounded-full w-[40px]" />
-                    <h2 className="text-sm font-semibold">Enoch Oyedeji</h2>
+                    <img src={user?.avatar?.url ? user?.avatar?.url : "/noavatar.png"} alt="img" />
+                    <h2 className="text-sm font-semibold">{user?.name}</h2>
                 </Link>
 
                 <div className="flex  flex-col justify-between overflow-y-auto h-full">

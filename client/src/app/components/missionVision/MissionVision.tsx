@@ -1,17 +1,18 @@
+import 'animate.css';
 
 const MissionVision = () => {
   return (
     <section className="max-w-6xl mx-auto  flex flex-col sm:flex-row  justify-between gap-4 p-4">
        
             {/* left */}
-            <div className="">
-                <img src="https://images.pexels.com/photos/2574616/pexels-photo-2574616.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                className=" h-[500px] " alt="Circular Image" />
+            <div className="animate__animated animate__fadeInUp  animate__delay-3s">
+                <img src="https://images.pexels.com/photos/1198171/pexels-photo-1198171.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                className=" h-[400px] object-cover " alt="Circular Image" />
             </div>
            
 
             {/* right */}
-            <div className="flex flex-col gap-2 " >
+            <div className="flex flex-col p-6 gap-2 animate__animated animate__fadeInUp  animate__delay-3s" >
                 <p>Our programs</p>
                 <h2 className="text-[32px] font-inter font-semibold">Why choose our coaching programs?</h2>
                 <p className="text-[16px] text-gray-600 max-w-[600px]">

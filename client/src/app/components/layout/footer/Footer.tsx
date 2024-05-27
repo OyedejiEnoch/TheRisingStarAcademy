@@ -14,8 +14,8 @@ const Footer = () => {
             <img src="/rsalogo.png" alt="logo" className="w-[70px] text-white" />
             <h2 className="font-bold text-white text-[26px]">Rising Star Academy</h2>
           </div>
-          <p className=" text-white max-w-[400px] ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus animi possimus nobis molestias quo laudantium, unde temporibus, eligendi officia 
-            consequuntur accusantium esse fuga eius expedita distinctio sed voluptas? Sequi, placeat?</p>
+          <p className=" text-white max-w-[400px] ">Rising Stars Academy is an initiative, born from a deep passion and divine guidance, with a clear mission to nurture the potential in young adults by helping them discover their
+           identity and purpose. We empower through quality education, coaching, and mentoring</p>
           
           <ul className="flex items-center gap-2 mt-4">
             <li><FaLinkedin size={24} className="text-white" /></li>

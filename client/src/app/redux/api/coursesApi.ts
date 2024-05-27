@@ -14,11 +14,8 @@ type Course ={
         body:string,
         summary:string
     }],
-    subCourses:[{
-        title:string,
-        body:string,
-        summary:string
-    }],
+    author:string,
+    subCourses:string[],
     image:{
         public_id:string,
         url:string
@@ -35,7 +32,7 @@ type getSingleCourse={
 
 export const courseApi =createApi({
     reducerPath:"courseApi",
-    baseQuery: fetchBaseQuery({baseUrl: 'http://localhost:4000/api', }),
+    baseQuery: fetchBaseQuery({baseUrl: 'https://therisingstaracademy.onrender.com/api', }),
     endpoints: (builder)=>({
         allCourse:builder.query<getCourses, void>({
             query:()=> "/courses/all"

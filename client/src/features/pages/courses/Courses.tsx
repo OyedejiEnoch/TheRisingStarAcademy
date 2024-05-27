@@ -10,7 +10,7 @@ const Courses = () => {
 
   return (
     <section className="w-full">
-        <div className="max-w-6xl mx-auto p-4 mt-2 mb-4">
+        <div className="max-w-6xl mx-auto p-4 mt-2 mb-4 ">
             <div className="grid md:grid-cols-3 lg:mt-20 flex-col gap-8">
            {isLoading ? array.map((_)=>(
               <SkeletonCard />

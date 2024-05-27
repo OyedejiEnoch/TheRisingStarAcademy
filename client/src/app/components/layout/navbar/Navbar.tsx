@@ -40,7 +40,7 @@ const Navbar = () => {
             {/* mid menu */}
             <ul className=" hidden sm:flex items-center gap-6 ">
                 {NAV_LINKS.map((link)=>(
-                    <Link to="/courses">
+                    <Link to={link.href}>
                     <li key={link.key}
                      className="text-[16px] text-white cursor-pointer hover:font-bold hover:text-[#201658] transition duration-150">{link.label}</li>
                      </Link>

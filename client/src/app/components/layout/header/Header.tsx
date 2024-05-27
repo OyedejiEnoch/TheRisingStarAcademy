@@ -1,28 +1,31 @@
 
 import { BackgroundBeams } from "../../ui/background-beams";
 import Reviews from "../../../../features/pages/reviews/Reviews";
+import 'animate.css';
 
 const Header = () => {
   return (
     <div className="h-[55rem] bg-slate-950 text-white w-full rounded-md  relative flex flex-col items-center overflow-hidden justify-center antialiased">
     <div className="max-w-2xl mx-auto p-4">
-      <h1 className="relative z-10 text-4xl md:text-7xl font-inter text-white text-center  font-bold">
+      <h1 className="relative z-10 text-4xl md:text-7xl font-inter text-white text-center  font-bold
+      animate__animated animate__fadeIn">
         The <span className="text-white">Rising</span> Star 
         <br />Academy
       </h1>
       <p></p>
-      <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10 mt-4">
+      <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10 mt-4
+      animate__animated animate__fadeInUp">
         Rising Stars Academy is more than just a place of learning; it's a home of 
         innovative development and a community passionate about growth, empowerment 
          and making a positive impact in the world.
       </p>
     </div>
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 animate__animated animate__fadeInUp">
         <button className="px-6 py-4 rounded-2xl bg-purple-700 text-white font-semibold">Register with us</button>
         <button className="px-6 py-4 rounded-2xl border border-[#0F1035]  font-semibold">View Courses</button>
       </div>
 
-    <div className="mt-8">
+    <div className="mt-8 animate__animated animate__fadeIn animate__delay-3s">
       <Reviews />
     </div>
     <BackgroundBeams />

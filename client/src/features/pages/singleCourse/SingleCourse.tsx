@@ -12,6 +12,27 @@ import { useSingleCourseQuery } from "../../../app/redux/api/coursesApi"
 import Spinner from "../../../app/components/spinner/Spinner"
   
 
+type Course ={
+  _id:string,
+  title:string,
+  description:string,
+  summary:string,
+  body:string,
+  about:string,
+  benefits:[],
+  topics:[{
+      title:string,
+      body:string,
+      summary:string
+  }],
+  author:string,
+  subCourses:string[],
+  image:{
+      public_id:string,
+      url:string
+  }
+}
+
 const SingleCourse = () => {
 
     const params=useParams()
@@ -48,13 +69,13 @@ const SingleCourse = () => {
             {contentChange ==="Default" ?  
             (
             <>
-              <About course={data?.course} />
+              <About course={(data?.course as Course)} />
             </>
             )
         : contentChange === "Lectures" ? 
             (
                 <>
-                    <Lectures course={data?.course} />   
+                    <Lectures course={(data?.course as Course)} />   
                 </>
             )  
         : contentChange === "SubCourses" ?
@@ -69,11 +90,11 @@ const SingleCourse = () => {
 
                   <div className=" w-full sm:w-[70%] p-2 sm:p-4">
                   <Accordion type="single" collapsible>
-                    {data?.course.subCourses.map((subCourse)=>(
+                    {data?.course?.subCourses.map((subCourse)=>(
                          <AccordionItem value="item-1 " className=" border-b border-gray-200">
-                         <AccordionTrigger className="font-semibold text-[16px] sm:text-[18px]">{subCourse.title}</AccordionTrigger>
+                         <AccordionTrigger className="font-semibold text-[16px] sm:text-[18px]">{subCourse}</AccordionTrigger>
                          <AccordionContent>
-                          {subCourse.body}
+                          {subCourse}
                          </AccordionContent>
                        </AccordionItem>
                     ))

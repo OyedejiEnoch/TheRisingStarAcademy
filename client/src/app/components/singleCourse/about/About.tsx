@@ -1,6 +1,6 @@
 import { useGetSingleTutorQuery } from "../../../redux/api/userApi"
 
-type Course ={
+type SingleCourse ={
     _id:string,
     title:string,
     description:string,
@@ -13,7 +13,7 @@ type Course ={
         body:string,
         summary:string
     }],
-    subCourses:[],
+    subCourses:string[],
     image:{
         public_id:string,
         url:string
@@ -22,7 +22,7 @@ type Course ={
 }
 
 type Prop ={
-    course:Course
+    course:SingleCourse
 }
 
 

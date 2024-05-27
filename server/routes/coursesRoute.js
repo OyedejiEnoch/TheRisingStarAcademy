@@ -39,7 +39,7 @@ router.put(
   "/admin/update/:id",
   verifyTutor,
   authorizedRoles("admin", "tutor"),
-  uploadImage.array("image", 2),
+  uploadImage.single("image"),
   updateCourse
 ),
   router.delete(

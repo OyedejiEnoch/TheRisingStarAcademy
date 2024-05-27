@@ -16,7 +16,7 @@ router.post(
   "/admin/new/:courseId",
   verifyTutor,
   authorizedRoles("admin", "tutor"),
-  uploadImage.array("image", 1),
+  uploadImage.single("image"),
   createSubCourse
 ),
   router.get("/all", getAllSubCourses),
@@ -25,7 +25,7 @@ router.post(
     "/admin/update/:id",
     verifyTutor,
     authorizedRoles("admin", "tutor"),
-    uploadImage.array("image", 1),
+    uploadImage.single("image"),
     updateCourse
   ),
   router.delete(

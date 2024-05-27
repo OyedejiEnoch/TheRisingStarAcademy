@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { IoMdBook, IoMdBookmark } from "react-icons/io";
 
-type Course={
+type MainCourse={
   _id:string,
   title:string,
   description:string,
@@ -12,7 +12,7 @@ type Course={
       body:string,
       summary:string
   }],
-  subCourses:[],
+  subCourses:string[],
   image:{
       public_id:string,
       url:string
@@ -20,14 +20,14 @@ type Course={
 }
 
 type Props={
-  course:Course
+  course:MainCourse
 }
 
 const SingleCourseCard = ({course}:Props) => {
   return (
     <div className="w-[340px] border border-gray-100 bg-white  rounded-xl " >
-    <div className="w-full ">
-        <img src={course.image.url ?course.image?.url : "/default_product.png" } alt="img" 
+    <div className="w-full  ">
+        <img src={course?.image?.url ?course.image?.url : "/default_product.png" } alt="img" 
         className="object-cover w-full rounded-t-xl h-[160px] "/>
     </div>
 

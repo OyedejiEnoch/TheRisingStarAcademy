@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import HomeSingleCourseCard from '../singleCourseCard/HomeSingleCourseCard';
 import {useLatestCoursesQuery } from '../../redux/api/coursesApi';
 import { SkeletonCard } from '../skeleton/Skeleton';
-
+import 'animate.css';
 
 const OurCourses = () => {
   const array=[1,2,3,4,5,6]
@@ -21,7 +21,7 @@ const OurCourses = () => {
     }
 
   return (
-    <section className="w-full height-[400px] mt-6 ">
+    <section className="w-full height-[400px] mt-6 animate__animated animate__fadeIn  animate__delay-3s ">
     <div className=" w-full sm:max-w-7xl sm:mx-auto p-4 sm:p-12 flex flex-col  gap-10 ">
         <div className='flex flex-col gap-2'>
         <p className="text-xl sm:text-[18px] font-medium text-[#8576FF] ">Our Courses</p>
