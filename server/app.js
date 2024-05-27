@@ -15,9 +15,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
   "http://localhost:5175",
-  "https://runorder.store",
-  "https://storeownerdashboard.runorder.store",
-  "https://admindashboard.runorder.store",
+  "https://the-rising-star-academy.vercel.app",
 ];
 app.use(
   cors({
