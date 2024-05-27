@@ -1,4 +1,3 @@
-import { FaArrowRightLong } from "react-icons/fa6";
 import { IoMdBook } from "react-icons/io";
 import { Link } from 'react-router-dom'
 
@@ -13,7 +12,7 @@ type Course={
       body:string,
       summary:string
   }],
-  subCourses:[],
+  subCourses:string[],
   image:{
       public_id:string,
       url:string

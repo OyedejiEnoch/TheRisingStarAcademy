@@ -50,7 +50,7 @@ const Login = () => {
   const {email, password}= credentials
   const handleSubmit =(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault()
-    const validName=/^[a-z A-Z]+$/
+    // const validName=/^[a-z A-Z]+$/
     const validEmail =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 
