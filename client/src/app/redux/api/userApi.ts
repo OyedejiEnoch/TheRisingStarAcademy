@@ -13,6 +13,23 @@ type UserDetails ={
     createdAt:string
 }
 
+type tutorDetails ={
+    _id:string,
+    name:string,
+    email:string,
+    phoneNo:string,
+    bio:string,
+    profession:string,
+    course:string,
+    avatar:{
+        public_id:string,
+        url:string
+    },
+}
+
+type SingleTutor ={
+    singleTutor:tutorDetails
+}
 
 export const userApi =createApi({
     reducerPath:"userApi",
@@ -38,8 +55,11 @@ export const userApi =createApi({
                 }
             },
             providesTags:["User"]
+        }),
+        getSingleTutor:builder.query<SingleTutor, string>({
+            query:(id)=> `/users/tutor/tutor/${id}`
         })
     })
 })
 
-export const {useUserProfileQuery} =userApi
+export const {useUserProfileQuery, useGetSingleTutorQuery} =userApi

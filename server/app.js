@@ -7,6 +7,7 @@ import tutorRoute from "./routes/tutorRoute.js";
 import userRoute from "./routes/usersRoute.js";
 import coursesRoute from "./routes/coursesRoute.js";
 import subCoursesRoute from "./routes/subCourseRoute.js";
+import noticeRoute from "./routes/noticeRoute.js";
 import cors from "cors";
 
 const app = express();
@@ -41,6 +42,7 @@ app.use("/api/users", userRoute);
 app.use("/api/users/tutor", tutorRoute);
 app.use("/api/courses", coursesRoute);
 app.use("/api/sub-courses", subCoursesRoute);
+app.use("/api/notice", noticeRoute);
 app.use(errorMiddleware);
 
 export default app;

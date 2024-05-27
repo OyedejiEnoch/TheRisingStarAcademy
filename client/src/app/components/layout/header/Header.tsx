@@ -12,11 +12,9 @@ const Header = () => {
       </h1>
       <p></p>
       <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10 mt-4">
-        Welcome to MailJet, the best transactional email service on the web.
-        We provide reliable, scalable, and customizable email solutions for
-        your business. Whether you&apos;re sending order confirmations,
-        password reset emails, or promotional campaigns, MailJet has got you
-        covered.
+        Rising Stars Academy is more than just a place of learning; it's a home of 
+        innovative development and a community passionate about growth, empowerment 
+         and making a positive impact in the world.
       </p>
     </div>
       <div className="flex items-center gap-6">

@@ -9,8 +9,8 @@ import { useUserProfileQuery } from "../../../redux/api/userApi.ts";
 
 const Navbar = () => {
 
-  const {data} =useUserProfileQuery()
-  console.log(data)
+  const {} =useUserProfileQuery()
+  // console.log(data)
   const {user} = useAppSelector ((state) => state.auth)
 
     const [isScrolled, setIsScrolled]=useState(false)
@@ -29,11 +29,11 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`${isScrolled ? " sticky top-0 right-0 z-50 bg-white bg-opacity-90 backdrop-filter backdrop-blur-sm" : ""} w-full bg-white transition`}>
+    <nav className={`${isScrolled ? " sticky top-0 right-0 z-50 bg-transparent text-black bg-opacity-90 backdrop-filter backdrop-blur-sm" : ""}   z-50 w-full bg-slate-950 transition`}>
         <div className="max-w-6xl mx-auto flex items-center px-2 py-4 justify-between ">
             {/* logo */}
             <div>
-                <img src="/rsalogo.png" alt="logo" className="h-[50px] sm:h-[70px]" />
+                <img src="/rsalogo.png" alt="logo" className="h-[50px] sm:h-[70px] text-white" />
                 {/* <h1 className={`${ isScrolled ? "text-black" : "text-[#201658]"} text-[20px] `}>RisingStarAcademy</h1> */}
             </div>
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                 {NAV_LINKS.map((link)=>(
                     <Link to="/courses">
                     <li key={link.key}
-                     className="text-[16px] text-gray-600 cursor-pointer hover:font-bold hover:text-[#201658] transition duration-150">{link.label}</li>
+                     className="text-[16px] text-white cursor-pointer hover:font-bold hover:text-[#201658] transition duration-150">{link.label}</li>
                      </Link>
                 ))}
             </ul>
@@ -50,17 +50,17 @@ const Navbar = () => {
             {/* right menu */}
             <div className="hidden sm:flex items-center gap-6">
                {user ? <>
-              <button className=" text-[16px] text-gray-600 flex items-center gap-2 hover:font-semibold transition duration-150">
+              <button className=" text-[16px] text-white flex items-center gap-2 hover:font-semibold transition duration-150">
                 <span className="text-black"> <FaUser  size={20} /></span>Dashboard</button>
 
 
-                <button className={`text-[16px] text-gray-600  flex items-center gap-2 hover:font-semibold transition duration-150`}>
+                <button className={`text-[16px] text-white  flex items-center gap-2 hover:font-semibold transition duration-150`}>
                 <span><SlLogout size={20} /></span>Logout</button>
                 </>
             
                 :
                 <>
-                <Link to="/auth/login" className="text-[16px]  text-gray-600 flex items-center gap-2 hover:font-semibold transition duration-150">
+                <Link to="/auth/login" className="text-[16px]  text-white flex items-center gap-2 hover:font-semibold transition duration-150">
                 <span><SlLogout size={20} /></span>Login/SignUp</Link>
                 </>
             }

@@ -7,12 +7,18 @@ type Course ={
     description:string,
     summary:string,
     body:string,
+    about:string,
+    benefits:[],
     topics:[{
         title:string,
         body:string,
         summary:string
     }],
-    subCourses:[],
+    subCourses:[{
+        title:string,
+        body:string,
+        summary:string
+    }],
     image:{
         public_id:string,
         url:string
@@ -21,6 +27,10 @@ type Course ={
 
 type getCourses={
     courses:Course[]
+}
+
+type getSingleCourse={
+    course:Course
 }
 
 export const courseApi =createApi({
@@ -33,7 +43,7 @@ export const courseApi =createApi({
         latestCourses:builder.query<getCourses, void>({
             query:()=> "/courses/all/latest"
         }),
-        singleCourse: builder.query<Course, void>({
+        singleCourse: builder.query<getSingleCourse, string>({
             query:(id)=>`/courses/single/${id}`
         })
     })

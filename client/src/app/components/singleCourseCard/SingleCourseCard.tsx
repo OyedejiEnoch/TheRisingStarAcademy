@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import { FaArrowRightLong } from "react-icons/fa6";
 import { IoMdBook, IoMdBookmark } from "react-icons/io";
 
 type Course={
@@ -28,7 +27,7 @@ const SingleCourseCard = ({course}:Props) => {
   return (
     <div className="w-[340px] border border-gray-100 bg-white  rounded-xl " >
     <div className="w-full ">
-        <img src="https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?auto=compress&cs=tinysrgb&w=600" alt="img" 
+        <img src={course.image.url ?course.image?.url : "/default_product.png" } alt="img" 
         className="object-cover w-full rounded-t-xl h-[160px] "/>
     </div>
 

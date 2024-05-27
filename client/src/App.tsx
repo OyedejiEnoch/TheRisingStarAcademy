@@ -15,7 +15,7 @@ function App() {
   const Layout =()=>{
     return (
 
-      <div className="flex flex-col h-screen justify-between">
+      <div className="flex flex-col h-screen justify-between relative">
         <Navbar />
         <Outlet />
         <Footer />

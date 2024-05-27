@@ -18,6 +18,7 @@ router.get("/my-profile", verifyTutor, getProfile),
   router.get("/update-password", verifyTutor, updatePassword),
   router.put("/update-profile", verifyTutor, updateProfile);
 router.get("/admin/tutors", verifyTutor, getAllTutors),
+  router.get("/tutor/:id", getSingleTutor),
   router.get("/admin/tutor/:id", verifyTutor, getSingleTutor),
   router.put("/admin/tutor/:id", verifyTutor, updateTutor),
   router.delete("/admin/tutor/:id", verifyTutor, deleteTutor);

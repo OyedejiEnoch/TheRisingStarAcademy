@@ -6,6 +6,10 @@ const courseSchema = new mongoose.Schema(
       type: String,
       required: [true, "Do enter the title of the course"],
     },
+    about: {
+      type: String,
+      required: [true, "Do enter course description"],
+    },
     description: {
       type: String,
       required: [true, "Do enter course description"],
@@ -23,6 +27,9 @@ const courseSchema = new mongoose.Schema(
       title: String,
       body: String,
       summary: String,
+    },
+    benefits: {
+      type: [],
     },
     author: {
       type: mongoose.Schema.Types.ObjectId,

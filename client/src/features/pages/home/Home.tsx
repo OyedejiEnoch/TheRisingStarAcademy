@@ -11,7 +11,9 @@ const Home = () => {
   return (
     <section>
       <Header />
+      <div className="mt-20">
       <About />
+      </div>
       <div className="mt-20">
       <MissionVision />
       </div>

@@ -8,9 +8,11 @@ import { Link } from 'react-router-dom';
 // import SingleCourseCard from '../singleCourseCard/SingleCourseCard';
 import HomeSingleCourseCard from '../singleCourseCard/HomeSingleCourseCard';
 import {useLatestCoursesQuery } from '../../redux/api/coursesApi';
+import { SkeletonCard } from '../skeleton/Skeleton';
 
 
 const OurCourses = () => {
+  const array=[1,2,3,4,5,6]
     const {data, isLoading} =useLatestCoursesQuery()
 
 
@@ -43,7 +45,11 @@ const OurCourses = () => {
         className="mySwiper"
             >
        
-        {data?.courses.map((course)=>(
+        {isLoading ? array.map((_)=>(
+              <SkeletonCard />
+          )) :
+        
+        data?.courses.map((course)=>(
 
         <SwiperSlide className='swiper-slide2 '>
             <Link to={`/store-owner/profile/`}>

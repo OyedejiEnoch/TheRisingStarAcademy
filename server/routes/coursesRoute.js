@@ -24,7 +24,7 @@ router.post(
   "/admin/new",
   verifyTutor,
   authorizedRoles("admin", "tutor"),
-  uploadImage.array("image", 2),
+  uploadImage.single("image"),
   createCourse
 ),
   router.get("/all", getAllCourses),

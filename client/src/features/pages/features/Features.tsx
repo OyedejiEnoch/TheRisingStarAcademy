@@ -26,7 +26,7 @@ const Features = () => {
 
                     <div className="flex flex-col gap-2 max-w-[350px] px-8 py-4 ">
                         <h2 className="font-semibold text-[20px] font-inter">One on One mentorship</h2>
-                        <p className="text-sm text-gray-600">One on One mentorship from industry professionals reliable, scalable, and customizable email solutions for your business. Whether you're sending order confirmations,</p>
+                        <p className="text-sm text-gray-600">One on One mentorship from industry professionals. We believe in the power of one-on-one mentorship to unlock hidden talents and shape the character of future leaders</p>
                     </div>
                 </div>
                 
@@ -37,7 +37,7 @@ const Features = () => {
 
                     <div className="flex flex-col gap-2 max-w-[350px] px-8 py-4">
                         <h2 className="font-semibold text-[20px] font-inter">Community to grow</h2>
-                        <p className="text-sm text-gray-600">A wholesome community to interact and grow in reliable, scalable, and customizable email solutions for your business. Whether you're sending order confirmations,</p>
+                        <p className="text-sm text-gray-600">A wholesome community to interact and grow. We foster and develop a community for everyone to fill and grow in. A community that fits everyone's needs and foster a healthy relationship</p>
                     </div>
                 </div>
 

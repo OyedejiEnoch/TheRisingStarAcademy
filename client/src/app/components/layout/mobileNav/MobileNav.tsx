@@ -14,7 +14,7 @@ const MobileNav = () => {
     <section className="w-full max-w-[300px]">
          <Sheet>
               <SheetTrigger asChild>
-                <RxHamburgerMenu size={24} />
+                <RxHamburgerMenu size={30} className="text-white cursor-pointer" />
               </SheetTrigger>
               <SheetContent side="right" className="border-none  bg-opacity-80 backdrop-filter backdrop-blur-sm flex flex-col gap-6">
                 <Link to="/" className="flex items-center gap-2 mt-10 ">

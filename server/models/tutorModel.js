@@ -36,7 +36,7 @@ const tutorSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    default: "tutor",
+    default: "admin",
   },
 });
 

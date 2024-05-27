@@ -2,6 +2,9 @@ import Course from "../models/courseModel.js";
 import createError from "../utils/errorHandler.js";
 import User from "../models/usersModel.js";
 import cloudinary from "cloudinary";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // to create a new course, =>/api/courses/admin/new
 export const createCourse = async (req, res, next) => {

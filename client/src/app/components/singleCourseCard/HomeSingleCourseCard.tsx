@@ -29,7 +29,7 @@ const HomeSingleCourseCard = ({course}:Props) => {
   return (
     <div className="w-[300px] border border-gray-100 bg-white  rounded-xl " >
     <div className="w-full ">
-        <img src="https://images.pexels.com/photos/1925536/pexels-photo-1925536.jpeg?auto=compress&cs=tinysrgb&w=600" alt="img" 
+        <img src={course.image.url ?course.image?.url : "/default_product.png" }  alt="img" 
         className="object-cover w-full rounded-t-xl h-[160px] "/>
     </div>
 
