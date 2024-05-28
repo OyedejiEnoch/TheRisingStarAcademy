@@ -37,6 +37,8 @@ export const registerTutor = async (req, res, next) => {
         expires: new Date(
           Date.now() + process.env.COOKIE_EXPIRES_TIME * 24 * 60 * 60 * 1000
         ),
+        sameSite: "None",
+        secure: true,
       })
       .status(201)
       .json({
@@ -80,6 +82,8 @@ export const loginTutor = async (req, res, next) => {
         expires: new Date(
           Date.now() + process.env.COOKIE_EXPIRES_TIME * 24 * 60 * 60 * 1000
         ),
+        sameSite: "None",
+        secure: true,
       })
       .status(201)
       .json({
@@ -113,6 +117,8 @@ export const googleSignIn = async (req, res, next) => {
           expires: new Date(
             Date.now() + process.env.COOKIE_EXPIRES_TIME * 24 * 60 * 60 * 1000
           ),
+          sameSite: "None",
+          secure: true,
         })
         .status(201)
         .json({
@@ -148,6 +154,8 @@ export const googleSignIn = async (req, res, next) => {
         expires: new Date(
           Date.now() + process.env.COOKIE_EXPIRES_TIME * 24 * 60 * 60 * 1000
         ),
+        sameSite: "None",
+        secure: true,
       })
       .status(201)
       .json({
