@@ -46,6 +46,11 @@ const MobileNav = () => {
                                  </SheetClose>
                             ))}
                         </ul>
+                        <SheetClose>
+                                 <a href="https://the-rising-star-academy-dashboard-goz8.vercel.app/"
+                                 className="text-[18px] text-semibold  cursor-pointer hover:font-bold hover:text-[#201658] transition duration-150">Dashboard</a>
+                
+                        </SheetClose>
                         </section>
                     </SheetClose>
 

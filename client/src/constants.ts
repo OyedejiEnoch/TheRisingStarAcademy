@@ -8,7 +8,7 @@ export const NAV_LINKS2 = [
     { href: '/', key: 'home', label: 'Homepage' },
     { href: '/', key: 'about', label: 'About Us' },
     { href: '/', key: 'courses', label: 'Courses' },
-    { href: '/', key: 'dashboard', label: 'Dashboard' },
+    // { href: 'https://the-rising-star-academy-dashboard-goz8.vercel.app/', key: 'dashboard', label: 'Dashboard' },
   ];
 
 
