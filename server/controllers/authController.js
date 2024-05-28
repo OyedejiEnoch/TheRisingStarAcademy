@@ -32,6 +32,8 @@ export const createUser = async (req, res, next) => {
         expires: new Date(
           Date.now() + process.env.COOKIE_EXPIRES_TIME * 24 * 60 * 60 * 1000
         ),
+        sameSite: "None",
+        secure: true,
       })
       .status(201)
       .json({
@@ -85,6 +87,8 @@ export const loginUser = async (req, res, next) => {
         expires: new Date(
           Date.now() + process.env.COOKIE_EXPIRES_TIME * 24 * 60 * 60 * 1000
         ),
+        sameSite: "None",
+        secure: true,
       })
       .status(200)
       .json({
@@ -118,6 +122,8 @@ export const googleLogin = async (req, res, next) => {
           expires: new Date(
             Date.now() + process.env.COOKIE_EXPIRES_TIME * 24 * 60 * 60 * 1000
           ),
+          sameSite: "None",
+          secure: true,
         })
         .status(200)
         .json({
