@@ -9,6 +9,7 @@ type UserDetails ={
         public_id:string,
         url:string
     },
+    myCourses:string[],
     role:string,
     createdAt:string
 }
@@ -66,10 +67,13 @@ export const authApi =createApi({
                     console.log(error)
                 }
             }
-        })
+        }),
+        logout: builder.query<void, void>({
+            query:()=> "/auth/logout"
+        }),
     })
 })
 
 
 
-export const {useLoginMutation, useRegisterMutation} =authApi
+export const {useLoginMutation, useRegisterMutation, useLazyLogoutQuery} =authApi

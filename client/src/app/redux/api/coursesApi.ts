@@ -42,8 +42,12 @@ export const courseApi =createApi({
         }),
         singleCourse: builder.query<getSingleCourse, string>({
             query:(id)=>`/courses/single/${id}`
-        })
+        }),
+        enrollCourse: builder.query<getSingleCourse, string>({
+            query:(id)=>`/courses/enroll/${id}`
+        }),
+
     })
 })
 
-export const {useAllCourseQuery, useLatestCoursesQuery,useSingleCourseQuery} = courseApi
+export const {useAllCourseQuery, useLatestCoursesQuery,useSingleCourseQuery, useLazyEnrollCourseQuery} = courseApi

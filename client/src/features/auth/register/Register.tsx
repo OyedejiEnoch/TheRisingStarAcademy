@@ -176,7 +176,7 @@ const Register = () => {
 
               <button className="w-full px-6 py-3 bg-slate-950 hover:bg-gray-800 transition duration-150 shadow-md rounded-md text-white ">{isLoading ? "Loading" : "Register"}</button>
               <div className="flex flex-col justify-center gap-4 items-center w-full mt-2">
-                <p className="text-gray-600 text-sm cursor-pointer flex items-center gap-2"> Do not have an account? <Link to= {"/auth/register"} className="font-bold text-black ">Sign Up</Link></p>
+                <p className="text-gray-600 text-sm cursor-pointer flex items-center gap-2"> Already have an account? <Link to= {"/auth/login"} className="font-bold text-black ">Sign In</Link></p>
                <p className="text-gray-600 text-sm cursor-pointer"> <Link to= {"/auth/register"}>Forgot Password? </Link></p>
               </div>
             </form>

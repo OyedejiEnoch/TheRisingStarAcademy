@@ -47,7 +47,7 @@ const Features = () => {
 
                     <div className="flex flex-col gap-2 max-w-[350px]  px-8 py-4">
                         <h2 className="font-semibold text-[20px] font-inter">Instant Communication</h2>
-                        <p className="text-sm text-gray-600">Welcome to MailJet, the best transactional email service on the web. We provide reliable, scalable, and customizable email solutions for your business. Whether you're sending order confirmations,</p>
+                        <p className="text-sm text-gray-600">Due to our one-on-one mentorship, we offer instant communication with everyone, allowing transparency and easy access to our mentors.</p>
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@ const Features = () => {
 
                     <div className="flex flex-col gap-2 max-w-[350px]  px-8 py-4">
                         <h2 className="font-semibold text-[20px] font-inter">Projects for skills</h2>
-                        <p className="text-sm text-gray-600">Practical projects to showcase your newfound skills Whether you're sending order confirmations,</p>
+                        <p className="text-sm text-gray-600">Practical projects to showcase your new found skills allowing for development and practical experience. </p>
                     </div>
                 </div>
 

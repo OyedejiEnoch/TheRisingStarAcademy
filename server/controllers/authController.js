@@ -286,3 +286,24 @@ export const resetPassword = async (req, res, next) => {
     next(error);
   }
 };
+
+export const logOut = async (req, res, next) => {
+  try {
+    res.cookie("accessToken", null, {
+      httpOnly: true,
+      expires: new Date(Date.now()),
+    });
+
+    res.status(200).json({
+      success: true,
+      message: "Logged out successfully",
+    });
+
+    // res.clearCookie("accessToken").status(200).json({
+    //   success: true,
+    //   message: "Logged out successfully",
+    // })
+  } catch (err) {
+    next(err);
+  }
+};

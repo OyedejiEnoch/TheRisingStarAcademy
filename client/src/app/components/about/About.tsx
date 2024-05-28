@@ -25,7 +25,7 @@ const About = () => {
                   Our vision is to create a transformative environment where individuals of all ages, from teenagers to
                   young adults, can embark on a journey of self-discovery, learning, and empowerment. 
                 </p>
-                <button className="px-6 py-4 bg-[#0F1035] text-white font-semibold w-[200px] rounded-full">View More</button>
+                {/* <button className="px-6 py-4 bg-[#0F1035] text-white font-semibold w-[200px] rounded-full">View More</button> */}
             </div>
 
             {/* right */}

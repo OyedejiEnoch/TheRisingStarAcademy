@@ -12,7 +12,7 @@ const MissionVision = () => {
            
 
             {/* right */}
-            <div className="flex flex-col p-6 gap-2 animate__animated animate__fadeInUp  animate__delay-3s" >
+            <div className="flex flex-col sm:p-6 gap-2 animate__animated animate__fadeInUp  animate__delay-3s" >
                 <p>Our programs</p>
                 <h2 className="text-[32px] font-inter font-semibold">Why choose our coaching programs?</h2>
                 <p className="text-[16px] text-gray-600 max-w-[600px]">

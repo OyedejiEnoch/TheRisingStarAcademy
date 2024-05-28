@@ -7,9 +7,11 @@ import {
   } from "../../../app/components/ui/accordion"
 import Lectures from "../../../app/components/singleCourse/lectures/Lectures"
 import About from "../../../app/components/singleCourse/about/About"
-import { useParams } from "react-router-dom"
-import { useSingleCourseQuery } from "../../../app/redux/api/coursesApi"
+import { useNavigate, useParams } from "react-router-dom"
+import { useLazyEnrollCourseQuery, useSingleCourseQuery } from "../../../app/redux/api/coursesApi"
 import Spinner from "../../../app/components/spinner/Spinner"
+import { useAppSelector } from "../../../app/redux/hooks"
+import { toast } from "react-toastify"
   
 
 type Course ={
@@ -35,12 +37,26 @@ type Course ={
 
 const SingleCourse = () => {
 
+  const navigate=useNavigate()
     const params=useParams()
+    const {user}=useAppSelector((state)=>state.auth)
     const {data, isLoading} = useSingleCourseQuery((params.id as string))
+    const [enrollCourse,{isLoading:isEnrollLoading}]=useLazyEnrollCourseQuery()
     const [contentChange, setContentChange]= useState("Default")
 
     console.log(data)
     console.log(params.id)
+
+    const handleEnrollCourse =()=>{
+      if(!user){
+        navigate("/auth/login")
+        toast.error("Login first to enroll")
+      }else{
+       enrollCourse((params.id as string))
+      }
+    }
+
+    const findEnrolledCourse =  user?.myCourses.find((course)=> course === params.id)
 
     if(isLoading){
       return <Spinner />
@@ -112,18 +128,25 @@ const SingleCourse = () => {
         {/* right */}
         <div className="hidden sm:flex flex-1 justify-end sticky top-0 w-[46%] right-0 z-20">
             <div className="flex w-[90%] ">
-                <div className="w-full flex flex-col justify-between h-[400px] bg-white border border-gray-200 p-4">
+                {<div className="w-full flex flex-col justify-between h-[400px] bg-white border border-gray-200 p-4">
                     <div className="flex flex-col gap-2">
                     <h2 className="font-semibold text-[20px] sm:text-[22px] text-gray-800 font-inter">Summary</h2>
                     <hr />
                     
 
-                    <p className="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat temporibus omnis minus sunt alias, possimus incidunt, sit porro placeat pariatur excepturi ullam illum, molestiae odit! Rerum, consectetur? Animi, ex placeat?</p>
+                    <p className="text-sm text-gray-600">{data?.course?.summary}</p>
                     </div>
                     
+                    {!user ?
+                    <button onClick={handleEnrollCourse} className="font-inter w-full bg-slate-950 px-6 py-4 text-white text-[16px] font-semibold cursor-pointer rounded-md">{isEnrollLoading? "Loading ":"Enroll Today"}</button>
+                    : 
+                      findEnrolledCourse ? "" :
+                    
+                      <button onClick={handleEnrollCourse} className="font-inter w-full bg-slate-950 px-6 py-4 text-white text-[16px] font-semibold cursor-pointer rounded-md">{isEnrollLoading? "Loading ":"Enroll Today"}</button>
+                    
+                    }
 
-                    <button className="font-inter w-full bg-slate-950 px-6 py-4 text-white text-[16px] font-semibold cursor-pointer rounded-md">Enroll Today</button>
-                </div>
+                </div>}
             </div>
         </div>
 

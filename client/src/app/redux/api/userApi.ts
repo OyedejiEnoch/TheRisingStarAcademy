@@ -9,6 +9,7 @@ type UserDetails ={
         public_id:string,
         url:string
     },
+    myCourses:string[],
     role:string,
     createdAt:string
 }
