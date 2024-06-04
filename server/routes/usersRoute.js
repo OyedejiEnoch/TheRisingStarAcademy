@@ -8,6 +8,7 @@ import {
   getSingleUser,
   updateUser,
   getUsersStats,
+  deleteUser,
 } from "../controllers/userController.js";
 import {
   authorizedRoles,
@@ -45,6 +46,12 @@ router.put(
   verifyTutor,
   authorizedRoles("admin"),
   updateUser
+);
+router.put(
+  "/admin/delete/:id",
+  verifyTutor,
+  authorizedRoles("admin"),
+  deleteUser
 );
 router.get(
   "/admin/user-stats",

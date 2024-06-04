@@ -133,7 +133,13 @@ export const deleteCourse = async (req, res, next) => {
       return next(createError(404, "No course found"));
     }
 
-    if (course.image.public_id) {
+    if (course.image?.public_id) {
+      cloudinary.v2.config({
+        cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+        api_key: process.env.CLOUDINARY_API_KEY,
+        api_secret: process.env.CLOUDINARY_API_SECRET,
+        secure: true,
+      });
       const { result } = await cloudinary.v2.uploader.destroy(
         course.image.public_id
       );
