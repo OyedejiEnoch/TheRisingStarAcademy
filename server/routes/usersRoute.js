@@ -47,7 +47,7 @@ router.put(
   authorizedRoles("admin"),
   updateUser
 );
-router.put(
+router.delete(
   "/admin/delete/:id",
   verifyTutor,
   authorizedRoles("admin"),
